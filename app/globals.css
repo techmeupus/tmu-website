@@ -68,7 +68,7 @@
   }
   
   .bg-gradient-primary {
-    @apply bg-gradient-to-br from-primary via-primary-dark to-secondary;
+    @apply bg-gradient-to-br from-primary via-primary-dark to-accent;
   }
   
   .shadow-custom {

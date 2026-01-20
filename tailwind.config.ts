@@ -9,15 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Blue primary colors
         primary: {
-          DEFAULT: '#6BCF3A',   // Fresh modern green (not neon)
-          hover: '#58B82F',
-          soft: '#EAF7E3',      // Soft green background
+          DEFAULT: '#3B82F6',   // Blue-500
+          dark: '#1D4ED8',      // Blue-700
+          soft: '#DBEAFE',      // Blue-50 (soft blue background)
         },
 
+        // Gray as secondary
+        secondary: {
+          DEFAULT: '#6B7280',   // Gray-500
+          dark: '#374151',      // Gray-700
+        },
+
+        // Accent color (can keep green or change to another blue shade)
         accent: {
-          DEFAULT: '#22C55E',   // CTA accent (buttons, icons)
-          hover: '#16A34A',
+          DEFAULT: '#2563EB',   // Blue-600
+          hover: '#1D4ED8',     // Blue-700
         },
 
         dark: {
@@ -25,7 +33,18 @@ const config: Config = {
           light: '#374151',
         },
 
+        // Enhanced gray scale
         gray: {
+          50: '#F9FAFB',
+          100: '#F3F4F6',
+          200: '#E5E7EB',
+          300: '#D1D5DB',
+          400: '#9CA3AF',
+          500: '#6B7280',
+          600: '#4B5563',
+          700: '#374151',
+          800: '#1F2937',
+          900: '#111827',
           text: '#6B7280',      // Body text
           muted: '#9CA3AF',
           border: '#E5E7EB',
