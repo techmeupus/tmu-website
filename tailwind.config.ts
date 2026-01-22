@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Blue primary colors
+        // Deep Indigo / Navy primary
         primary: {
-          DEFAULT: '#3B82F6',   // Blue-500
-          dark: '#1D4ED8',      // Blue-700
-          soft: '#DBEAFE',      // Blue-50 (soft blue background)
+          DEFAULT: '#3730A3',   // Indigo-800
+          dark: '#1E1B4B',      // Indigo-950
+          soft: '#C7D2FE',      // Indigo-200 (contrast-safe)
         },
 
         // Gray as secondary
@@ -22,33 +22,33 @@ const config: Config = {
           dark: '#374151',      // Gray-700
         },
 
-        // Accent color (can keep green or change to another blue shade)
+        // Accent color (very dark indigo)
         accent: {
-          DEFAULT: '#2563EB',   // Blue-600
-          hover: '#1D4ED8',     // Blue-700
+          DEFAULT: '#312E81',   // Indigo-900
+          hover: '#1E1B4B',     // Indigo-950
         },
 
         dark: {
-          DEFAULT: '#1F2937',   // Main dark (footer / headings)
-          light: '#374151',
+          DEFAULT: '#0F172A',   // Slate-900 (near black, premium)
+          light: '#1E293B',
         },
 
         // Enhanced gray scale
         gray: {
-          50: '#F9FAFB',
-          100: '#F3F4F6',
-          200: '#E5E7EB',
-          300: '#D1D5DB',
-          400: '#9CA3AF',
-          500: '#6B7280',
-          600: '#4B5563',
-          700: '#374151',
-          800: '#1F2937',
-          900: '#111827',
-          text: '#6B7280',      // Body text
-          muted: '#9CA3AF',
-          border: '#E5E7EB',
-          bg: '#F9FAFB',
+          50: '#F8FAFC',
+          100: '#F1F5F9',
+          200: '#E2E8F0',
+          300: '#CBD5E1',
+          400: '#94A3B8',
+          500: '#64748B',
+          600: '#475569',
+          700: '#334155',
+          800: '#1E293B',
+          900: '#0F172A',
+          text: '#64748B',
+          muted: '#94A3B8',
+          border: '#E2E8F0',
+          bg: '#F8FAFC',
         },
 
         white: '#FFFFFF',

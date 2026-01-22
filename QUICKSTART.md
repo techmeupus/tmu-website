@@ -71,7 +71,7 @@ npm start
 
 The website includes:
 - **Phone**: (302) 390-7520
-- **Email**: abrersharief@techmeup.us
+- **Email**: abrarsharief@techmeup.us
 - **Website**: TechMeUp.us
 
 ## 🎨 What's Included

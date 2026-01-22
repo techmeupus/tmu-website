@@ -34,14 +34,14 @@ export default function CTA() {
               <div className="text-gray-600 text-sm mt-1">(302) 390-7520</div>
             </a>
 
-            <a href="mailto:abrersharief@techmeup.us" className="bg-gray-50 hover:bg-gray-100 rounded-xl p-6 transition-all duration-300 group border border-gray-200">
+            <a href="mailto:abrarsharief@techmeup.us" className="bg-gray-50 hover:bg-gray-100 rounded-xl p-6 transition-all duration-300 group border border-gray-200">
               <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-all">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
               <div className="text-gray-900 font-semibold">Email Us</div>
-              <div className="text-gray-600 text-sm mt-1">abrersharief@techmeup.us</div>
+              <div className="text-gray-600 text-sm mt-1">abrarsharief@techmeup.us</div>
             </a>
 
             <a href="https://techmeup.us" target="_blank" rel="noopener noreferrer" className="bg-gray-50 hover:bg-gray-100 rounded-xl p-6 transition-all duration-300 group border border-gray-200">
