@@ -61,18 +61,6 @@ export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
-  // Floating animation variants
-  const floatingVariants = {
-    animate: {
-      y: [0, -20, 0],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
   // Counter container animation
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -83,7 +71,7 @@ export default function Hero() {
         delayChildren: 0.3
       }
     }
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -92,10 +80,10 @@ export default function Hero() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
-  };
+  } as const;
 
   // Hero content animation
   const heroContentVariants = {
@@ -105,10 +93,10 @@ export default function Hero() {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
-  };
+  } as const;
 
   const buttonVariants = {
     initial: { scale: 1 },
@@ -116,14 +104,14 @@ export default function Hero() {
       scale: 1.05,
       transition: {
         duration: 0.2,
-        ease: "easeInOut"
+        ease: "easeInOut" as const
       }
     },
     tap: { scale: 0.95 }
-  };
+  } as const;
 
   return (
-    <section className="relative min-h-screen overflow-hidden py-20 ">
+    <section className="relative min-h-screen overflow-hidden py-24 ">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-800/80 to-gray-900/90 z-10"></div>
@@ -154,21 +142,38 @@ export default function Hero() {
       {/* Floating Elements - Animated with Framer Motion */}
       <motion.div 
         className="hidden md:block absolute top-20 left-10 w-16 h-16 bg-white/20 rounded-full z-20"
-        variants={floatingVariants}
-        animate="animate"
-        style={{ animationDelay: '0s' }}
+        animate={{ 
+          y: [0, -20, 0],
+          transition: {
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }
+        }}
       />
       <motion.div 
         className="hidden md:block absolute top-40 right-20 w-24 h-24 bg-blue-500/30 rounded-full z-20"
-        variants={floatingVariants}
-        animate="animate"
-        style={{ animationDelay: '1s' }}
+        animate={{ 
+          y: [0, -20, 0],
+          transition: {
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }
+        }}
       />
       <motion.div 
         className="hidden md:block absolute bottom-20 left-1/4 w-12 h-12 bg-white/20 rounded-full z-20"
-        variants={floatingVariants}
-        animate="animate"
-        style={{ animationDelay: '2s' }}
+        animate={{ 
+          y: [0, -20, 0],
+          transition: {
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }
+        }}
       />
 
       <div ref={ref} className="container-custom relative z-30 min-h-screen flex items-center justify-center px-4">
