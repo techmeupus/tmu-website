@@ -59,7 +59,7 @@ export default function Header() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="container-custom py-4">
+<nav className="container-custom py-0 md:py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
           {/* <Link href="/" className="flex items-center">
