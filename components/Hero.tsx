@@ -193,14 +193,14 @@ export default function Hero() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Get More
+              Own Your
               <motion.span 
                 className="block text-primary mt-2 md:mt-4"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                Customers Online
+                Digital Space
               </motion.span>
             </motion.h1>
             
@@ -210,8 +210,7 @@ export default function Hero() {
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Transform your digital presence and accelerate growth with our end-to-end 
-              technology solutions designed for modern businesses.
+              Build a stronger digital presence and drive faster growth with our end-to-end technology solutions for modern businesses.
             </motion.p>
             
             <motion.div 
