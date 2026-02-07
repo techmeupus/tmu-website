@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function Services() {
   const services = [
     {
@@ -17,7 +19,8 @@ export default function Services() {
         "Client portals & dashboards",
         "Website redesign & optimization"
       ],
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
+      link: "/services/web-software-solutions"
     },
     {
       icon: (
@@ -34,7 +37,8 @@ export default function Services() {
         "Data backups & security",
         "Tech consulting for SMBs"
       ],
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
+      link: "/services/it-business-technology"
     },
     {
       icon: (
@@ -51,7 +55,8 @@ export default function Services() {
         "Workflow & task automation",
         "Email & SMS automation"
       ],
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
+      link: "/services/crm-automation"
     },
     {
       icon: (
@@ -68,7 +73,8 @@ export default function Services() {
         "Online presence setup",
         "Brand strategy consulting"
       ],
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
+      link: "/services/branding-business-presence"
     },
     {
       icon: (
@@ -85,7 +91,8 @@ export default function Services() {
         "Social media marketing (SMO)",
         "Landing pages for lead generation"
       ],
-      color: "from-indigo-500 to-purple-500"
+      color: "from-indigo-500 to-purple-500",
+      link: "/services/digital-marketing"
     },
     {
       icon: (
@@ -102,7 +109,8 @@ export default function Services() {
         "Backup & recovery solutions",
         "Security audits & monitoring"
       ],
-      color: "from-red-500 to-pink-500"
+      color: "from-red-500 to-pink-500",
+      link: "/services/security-compliance"
     },
     {
       icon: (
@@ -119,7 +127,8 @@ export default function Services() {
         "Business process automation",
         "Custom AI tools for operations"
       ],
-      color: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500",
+      link: "/services/ai-smart-business-tools"
     },
     {
       icon: (
@@ -136,7 +145,8 @@ export default function Services() {
         "Automation monitoring",
         "Technical support & consulting"
       ],
-      color: "from-teal-500 to-green-500"
+      color: "from-teal-500 to-green-500",
+      link: "/services/ongoing-monthly-services"
     }
   ];
 
@@ -188,12 +198,12 @@ export default function Services() {
                 ))}
               </ul>
               
-              <button className="text-primary font-semibold flex items-center group-hover:gap-2 transition-all">
+              <Link href={service.link} className="text-primary font-semibold flex items-center group-hover:gap-2 transition-all">
                 Learn More
                 <svg className="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </button>
+              </Link>
             </div>
           ))}
         </div>
