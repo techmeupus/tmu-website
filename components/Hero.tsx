@@ -111,7 +111,7 @@ export default function Hero() {
   } as const;
 
   return (
-    <section className="relative min-h-screen overflow-hidden py-24 ">
+    <section className="relative min-h-screen overflow-hidden py-12 ">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-800/80 to-gray-900/90 z-10"></div>

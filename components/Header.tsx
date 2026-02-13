@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,11 +16,32 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleServiceClick = (e) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    
+    // Check if we're on the home page
+    if (window.location.pathname === '/') {
+      // Scroll to services section
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page with hash
+      window.location.href = '/#services';
+    }
+  };
+
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white shadow-lg' 
+        : 'bg-transparent'
+    }`}>
+      <div className={`text-white py-2 text-sm hidden md:block transition-colors duration-300 ${
+        isScrolled ? 'bg-gradient-primary' : 'bg-gradient-primary'
       }`}>
-      {/* Top Bar */}
-      <div className="bg-gradient-primary text-white py-2 text-sm">
         <div className="container-custom flex justify-between items-center">
           <div className="flex items-center space-x-6">
             <a href="tel:3023907520" className="hover:text-secondary-light transition-colors flex items-center">
@@ -59,16 +79,9 @@ export default function Header() {
       </div>
 
       {/* Main Navigation */}
-<nav className="container-custom py-0 md:py-3">
+      <nav className="container-custom py-0 md:py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          {/* <Link href="/" className="flex items-center">
-            <div className="text-2xl font-bold font-heading">
-              <span className="text-primary">TECH</span>
-              <span className="text-navy">ME</span>
-              <span className="text-secondary">UP</span>
-            </div>
-          </Link> */}
           <Link href="/" className="flex items-center">
             <Image
               src="/image/tmu-logo (1).png"
@@ -76,42 +89,61 @@ export default function Header() {
               width={100}
               height={100}
               priority
-              className="w-36 h-auto "   
-
+              className="w-36 h-auto"
             />
           </Link>
 
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+            {/* Services Dropdown */}
             <div className="relative group">
-              <button className="text-navy hover:text-primary transition-colors font-medium flex items-center">
+              <button className={`transition-colors font-medium flex items-center ${
+                isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
+              }`}>
                 Services
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+
+              <div className="absolute left-0 mt-3 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="py-3">
+                  <Link href="/services/web-software-solutions" className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Web & Software Solutions</Link>
+                  <Link href="/services/it-business-technology" className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">IT & Business Technology</Link>
+                  <Link href="/services/crm-automation" className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">CRM & Automation</Link>
+                  <Link href="/services/branding-business-presence" className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Branding & Business Presence</Link>
+                  <Link href="/services/digital-marketing" className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Digital Marketing</Link>
+                  <Link href="/services/security-compliance" className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Security & Compliance</Link>
+                  <Link href="/services/ai-smart-business-tools" className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">AI & Smart Business Tools</Link>
+                  <Link href="/services/ongoing-monthly-services" className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Ongoing Monthly Services</Link>
+                </div>
+              </div>
             </div>
-            <Link href="/solutions" className="text-navy hover:text-primary transition-colors font-medium">
-              Solutions
-            </Link>
-            <Link href="/industries" className="text-navy hover:text-primary transition-colors font-medium">
-              Industries
-            </Link>
-            <Link href="/case-studies" className="text-navy hover:text-primary transition-colors font-medium">
-              Portfolio
-            </Link>
-            <Link href="/blog" className="text-navy hover:text-primary transition-colors font-medium">
-              Resources
-            </Link>
-            <Link href="/contact" className="btn-primary">
-              Get Started
-            </Link>
+
+            <Link href="/solutions" className={`transition-colors font-medium ${
+              isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
+            }`}>Solutions</Link>
+            <Link href="/industries" className={`transition-colors font-medium ${
+              isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
+            }`}>Industries</Link>
+            <Link href="/case-studies" className={`transition-colors font-medium ${
+              isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
+            }`}>About Us</Link>
+            <Link href="/contact" className={`btn-primary ${
+              !isScrolled && 'bg-primary text-navy hover:bg-secondary-light hover:text-navy'
+            }`}>Get Started</Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-navy"
+            className={`lg:hidden ${
+              isScrolled ? 'text-navy' : 'text-white'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -126,24 +158,62 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+          <div className={`lg:hidden mt-4 pb-4 border-t pt-4 backdrop-blur-md ${
+            isScrolled 
+              ? 'bg-white border-gray-200' 
+              : 'bg-black/20 border-white/20'
+          }`}>
             <div className="flex flex-col space-y-4">
-              <Link href="/services" className="text-navy hover:text-primary transition-colors font-medium">
+              <button 
+                onClick={handleServiceClick}
+                className={`text-left transition-colors font-medium ${
+                  isScrolled 
+                    ? 'text-navy hover:text-primary' 
+                    : 'text-white hover:text-secondary-light'
+                }`}
+              >
                 Services
-              </Link>
-              <Link href="/solutions" className="text-navy hover:text-primary transition-colors font-medium">
+              </button>
+              <Link 
+                href="/solutions" 
+                className={`transition-colors font-medium ${
+                  isScrolled 
+                    ? 'text-navy hover:text-primary' 
+                    : 'text-white hover:text-secondary-light'
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Solutions
               </Link>
-              <Link href="/industries" className="text-navy hover:text-primary transition-colors font-medium">
+              <Link 
+                href="/industries" 
+                className={`transition-colors font-medium ${
+                  isScrolled 
+                    ? 'text-navy hover:text-primary' 
+                    : 'text-white hover:text-secondary-light'
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Industries
               </Link>
-              <Link href="/portfolio" className="text-navy hover:text-primary transition-colors font-medium">
-                Portfolio
+              <Link 
+                href="/case-studies" 
+                className={`transition-colors font-medium ${
+                  isScrolled 
+                    ? 'text-navy hover:text-primary' 
+                    : 'text-white hover:text-secondary-light'
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About Us
               </Link>
-              <Link href="/resources" className="text-navy hover:text-primary transition-colors font-medium">
-                Resources
-              </Link>
-              <Link href="/contact" className="btn-primary inline-block text-center">
+              <Link 
+                href="/contact" 
+                className={`btn-primary inline-block text-center ${
+                  !isScrolled && 'bg-primary text-navy hover:bg-secondary-light hover:text-navy'
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Get Started
               </Link>
             </div>
