@@ -70,8 +70,8 @@ npm start
 ## 📞 Contact Details in Website
 
 The website includes:
-- **Phone**: (302) 390-7520
-- **Email**: abrarsharief@techmeup.us
+- **Phone**: +1 (863) 333-1891
+- **Email**: Info@techmeup.us
 - **Website**: TechMeUp.us
 
 ## 🎨 What's Included
