@@ -113,11 +113,7 @@ export default function Footer() {
                   Portfolio
                 </Link>
               </li>
-              <li>
-                <Link href="/case-studies" className="text-gray-400 hover:text-primary text-sm transition-colors">
-                  Case Studies
-                </Link>
-              </li>
+              
               <li>
                 <Link href="/blog" className="text-gray-400 hover:text-primary text-sm transition-colors">
                   Blog & Resources

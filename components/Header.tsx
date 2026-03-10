@@ -125,8 +125,11 @@ export default function Header() {
               }`}>Solutions</Link>
             <Link href="/industries" className={`transition-colors font-medium ${isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
               }`}>Industries</Link>
-            <Link href="/case-studies" className={`transition-colors font-medium ${isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
+            <Link href="/portfolio" className={`transition-colors font-medium ${isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
+              }`}>Portfolio</Link>
+            <Link href="/about-us" className={`transition-colors font-medium ${isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
               }`}>About Us</Link>
+
             <Link href="/contact" className={`btn-primary ${!isScrolled && 'bg-primary text-navy hover:bg-secondary-light hover:text-navy'
               }`}>Get Started</Link>
           </div>
@@ -174,6 +177,16 @@ export default function Header() {
                 Solutions
               </Link>
               <Link
+                href="/portfolio"
+                className={`transition-colors font-medium ${isScrolled
+                  ? 'text-navy hover:text-primary'
+                  : 'text-white hover:text-secondary-light'
+                  }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Portfolio
+              </Link>
+              <Link
                 href="/industries"
                 className={`transition-colors font-medium ${isScrolled
                   ? 'text-navy hover:text-primary'
@@ -184,7 +197,7 @@ export default function Header() {
                 Industries
               </Link>
               <Link
-                href="/case-studies"
+                href="/about-us"
                 className={`transition-colors font-medium ${isScrolled
                   ? 'text-navy hover:text-primary'
                   : 'text-white hover:text-secondary-light'
