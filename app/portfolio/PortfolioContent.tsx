@@ -1,7 +1,7 @@
 // app/portfolio/PortfolioContent.tsx
 'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 import Link from "next/link";
 import { motion } from 'framer-motion';
 
@@ -17,7 +17,7 @@ const projects = [
     image: "/portfolio/cinco.jpg",
     logo: "/portfolio/logos/cinco.svg",
     technologies: ["Node", "Figma", "SEO"],
-    liveUrl: "https://cincosoccerlakeland.com/", // UPDATED URL
+    liveUrl: "https://cincosoccerlakeland.com/",
     caseStudy: {
       problem: "Client needed a modern, professional website that showcases their soccer facilities and attracts players and event bookings.",
       solution: "Designed a clean, sports-oriented website with field information, scheduling, and easy contact options.",
@@ -190,8 +190,9 @@ const testimonials = [
 export default function PortfolioContent() {
   const [filter, setFilter] = useState("All");
 
-  // Get unique industries for filter
-  const industries_filter = ["All", ...new Set(projects.map(p => p.industry))];
+  // Get unique industries for filter - FIXED: Convert Set to Array
+  const uniqueIndustries = Array.from(new Set(projects.map(p => p.industry)));
+  const industries_filter = ["All", ...uniqueIndustries];
   
   const filteredProjects = filter === "All" 
     ? projects 
@@ -279,7 +280,7 @@ export default function PortfolioContent() {
         </div>
       </section>
 
-      {/* Projects Grid - UPDATED: Direct links, no popup */}
+      {/* Projects Grid - Direct links, no popup */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
