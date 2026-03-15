@@ -150,6 +150,13 @@ export default function Services() {
     }
   ];
 
+  const scrollToForm = () => {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="section-padding bg-gray-50" id="services">
       <div className="container-custom">
@@ -211,7 +218,10 @@ export default function Services() {
         {/* CTA */}
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">Need a custom solution? We've got you covered.</p>
-          <button className="btn-primary text-lg px-8 py-4">
+          <button 
+            onClick={scrollToForm}
+            className="btn-primary text-lg px-8 py-4 cursor-pointer"
+          >
             Schedule Free Consultation
           </button>
         </div>

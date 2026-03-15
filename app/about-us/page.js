@@ -355,10 +355,10 @@ export default function AboutPage() {
                 Our commitment to quality and customer satisfaction ensures we exceed your expectations.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Link href="/contact" className="btn-primary">
+                <Link href="/" className="btn-primary">
                   Start Your Journey
                 </Link>
-                <Link href="/services" className="btn-outline">
+                <Link href="/" className="btn-outline">
                   Explore Services
                 </Link>
               </div>

@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +23,7 @@ export default function Header() {
     setIsMobileMenuOpen(false);
 
     // Check if we're on the home page
-    if (window.location.pathname === '/') {
+    if (pathname === '/') {
       const servicesSection = document.getElementById('services');
       if (servicesSection) {
         servicesSection.scrollIntoView({ behavior: 'smooth' });
@@ -31,6 +33,20 @@ export default function Header() {
     }
   };
 
+  const handleContactClick = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+
+    // Check if we're on the home page
+    if (pathname === '/') {
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = '/contact';
+    }
+  };
 
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled
@@ -71,6 +87,17 @@ export default function Header() {
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
               </svg>
             </a>
+            <div className="">
+
+              <Image
+                src="/image/bbb-logo.png"
+                alt="BBB Accredited Business"
+                width={100}
+                height={40}
+                className="w-20 h-8 opacity-90 hover:opacity-100 transition-opacity"
+              />
+
+            </div>
           </div>
         </div>
       </div>
@@ -121,17 +148,18 @@ export default function Header() {
               </div>
             </div>
 
-            <Link href="/solutions" className={`transition-colors font-medium ${isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
-              }`}>Solutions</Link>
-            <Link href="/industries" className={`transition-colors font-medium ${isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
-              }`}>Industries</Link>
             <Link href="/portfolio" className={`transition-colors font-medium ${isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
               }`}>Portfolio</Link>
             <Link href="/about-us" className={`transition-colors font-medium ${isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
               }`}>About Us</Link>
 
-            <Link href="/contact" className={`btn-primary ${!isScrolled && 'bg-primary text-navy hover:bg-secondary-light hover:text-navy'
-              }`}>Get Started</Link>
+            <button
+              onClick={handleContactClick}
+              className={`btn-primary ${!isScrolled && 'bg-primary text-navy hover:bg-secondary-light hover:text-navy'
+                }`}
+            >
+              Contact Us
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -167,16 +195,6 @@ export default function Header() {
                 Services
               </button>
               <Link
-                href="/solutions"
-                className={`transition-colors font-medium ${isScrolled
-                  ? 'text-navy hover:text-primary'
-                  : 'text-white hover:text-secondary-light'
-                  }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Solutions
-              </Link>
-              <Link
                 href="/portfolio"
                 className={`transition-colors font-medium ${isScrolled
                   ? 'text-navy hover:text-primary'
@@ -185,16 +203,6 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Portfolio
-              </Link>
-              <Link
-                href="/industries"
-                className={`transition-colors font-medium ${isScrolled
-                  ? 'text-navy hover:text-primary'
-                  : 'text-white hover:text-secondary-light'
-                  }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Industries
               </Link>
               <Link
                 href="/about-us"
@@ -206,14 +214,13 @@ export default function Header() {
               >
                 About Us
               </Link>
-              <Link
-                href="/contact"
+              <button
+                onClick={handleContactClick}
                 className={`btn-primary inline-block text-center ${!isScrolled && 'bg-primary text-navy hover:bg-secondary-light hover:text-navy'
                   }`}
-                onClick={() => setIsMobileMenuOpen(false)}
               >
-                Get Started
-              </Link>
+                Contact Us
+              </button>
             </div>
           </div>
         )}

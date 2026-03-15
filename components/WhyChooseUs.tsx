@@ -92,6 +92,13 @@ export default function WhyChooseUs() {
     }
   ];
 
+  const scrollToForm = () => {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
@@ -147,7 +154,10 @@ export default function WhyChooseUs() {
               </div>
             </div>
             
-            <button className="btn-primary">
+            <button 
+              onClick={scrollToForm}
+              className="btn-primary cursor-pointer"
+            >
               Start Your Project Today
             </button>
           </div>

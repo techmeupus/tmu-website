@@ -4,8 +4,9 @@
 import { useState } from 'react';
 import Link from "next/link";
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-// Portfolio projects data with UPDATED URLs
+// Portfolio projects data with CORRECTED image paths
 const projects = [
   {
     id: 1,
@@ -14,8 +15,8 @@ const projects = [
     industry: "Sports / Entertainment",
     workDone: "Website Design & Development",
     description: "Professional website for soccer facility showcasing fields, leagues, and events.",
-    image: "/portfolio/cinco.jpg",
-    logo: "/portfolio/logos/cinco.svg",
+    image: "/image/portfolio/cinco.png",
+    logo: "/logos/cinco.svg",
     technologies: ["Node", "Figma", "SEO"],
     liveUrl: "https://cincosoccerlakeland.com/",
     caseStudy: {
@@ -32,7 +33,7 @@ const projects = [
     industry: "Tech / Startup",
     workDone: "Web Platform",
     description: "Scalable web platform for tech startup with complex functionality.",
-    image: "/portfolio/clydios.jpg",
+    image: "/image/portfolio/clydios.png",
     logo: "/portfolio/logos/clydios.svg",
     technologies: ["Node", "Node.js", "MongoDB"],
     liveUrl: "https://clydios.com",
@@ -50,7 +51,7 @@ const projects = [
     industry: "Agency",
     workDone: "Website",
     description: "Creative agency website showcasing their portfolio and services.",
-    image: "/portfolio/digital-sphere.jpg",
+    image: "/image/portfolio/digitalSphere.png",
     logo: "/portfolio/logos/digital-sphere.svg",
     technologies: ["Next", "Figma", "Animation"],
     liveUrl: "https://digitalsphere.com",
@@ -68,8 +69,8 @@ const projects = [
     industry: "Home Services",
     workDone: "Website + SEO",
     description: "Lead-generating website for fencing contractor with local SEO optimization.",
-    image: "/portfolio/aj-fencing.jpg",
-    logo: "/portfolio/logos/aj-fencing.svg",
+    image: "/image/portfolio/ajfence.png",
+    logo: "/portfolio/logos/ajfence.png",
     technologies: ["WordPress", "SEO", "Local Business"],
     liveUrl: "https://ajfencemfg.com/",
     caseStudy: {
@@ -86,7 +87,7 @@ const projects = [
     industry: "Home Services",
     workDone: "Website",
     description: "Clean, professional website for family-owned fencing business.",
-    image: "/portfolio/esposito-fencing.jpg",
+    image: "/image/portfolio/esposito.png",
     logo: "/portfolio/logos/esposito-fencing.svg",
     technologies: ["WordPress", "Mobile Responsive"],
     liveUrl: "https://espositofencing.com/",
@@ -104,7 +105,7 @@ const projects = [
     industry: "Entertainment",
     workDone: "Website",
     description: "Dynamic website for entertainment and sound production company.",
-    image: "/portfolio/jnr-sounds.jpg",
+    image: "/image/portfolio/jr.png",
     logo: "/portfolio/logos/jnr-sounds.svg",
     technologies: ["Node", "Audio Integration", "CMS"],
     liveUrl: "https://thedigitalsphere.us/JnRSounds/",
@@ -122,7 +123,7 @@ const projects = [
     industry: "Security",
     workDone: "Website",
     description: "Professional website for security solutions provider.",
-    image: "/portfolio/protectify.jpg",
+    image: "/image/portfolio/protectify.png",
     logo: "/portfolio/logos/protectify.svg",
     technologies: ["Next.js", "Security Features", "Contact Forms"],
     liveUrl: "https://www.instagram.com/get_protectify/",
@@ -140,7 +141,7 @@ const projects = [
     industry: "Beauty",
     workDone: "Website + Branding",
     description: "Elegant beauty brand website with complete branding package.",
-    image: "/portfolio/ziva-beauty.jpg",
+    image: "/image/portfolio/ziva.png",
     logo: "/portfolio/logos/ziva-beauty.svg",
     technologies: ["Shopify", "Branding", "E-commerce"],
     liveUrl: "https://www.facebook.com/Zivabeautyyy/",
@@ -190,7 +191,7 @@ const testimonials = [
 export default function PortfolioContent() {
   const [filter, setFilter] = useState("All");
 
-  // Get unique industries for filter - FIXED: Convert Set to Array
+  // Get unique industries for filter
   const uniqueIndustries = Array.from(new Set(projects.map(p => p.industry)));
   const industries_filter = ["All", ...uniqueIndustries];
   
@@ -280,7 +281,7 @@ export default function PortfolioContent() {
         </div>
       </section>
 
-      {/* Projects Grid - Direct links, no popup */}
+      {/* Projects Grid - With Next.js Images */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -295,13 +296,31 @@ export default function PortfolioContent() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer block"
               >
-                {/* Project Image Placeholder */}
+                {/* Project Image with Next.js Image component */}
                 <div className="relative h-48 bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-gray-400/30 group-hover:scale-110 transition-transform duration-500">
-                    {project.name[0]}
-                  </div>
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      // Fallback if image doesn't load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      // Show the letter placeholder
+                      const parent = target.parentElement;
+                      if (parent) {
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'absolute inset-0 flex items-center justify-center text-6xl font-bold text-gray-400/30';
+                        placeholder.textContent = project.name[0];
+                        parent.appendChild(placeholder);
+                      }
+                    }}
+                  />
+                  
                   {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                     <span className="text-white font-semibold px-4 py-2 border-2 border-white rounded-lg">
                       Visit Live Site
                     </span>
@@ -418,7 +437,7 @@ export default function PortfolioContent() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link 
-                href="/contact" 
+                href="/" 
                 className="group inline-flex items-center px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Start a Project
@@ -427,7 +446,7 @@ export default function PortfolioContent() {
                 </svg>
               </Link>
               <Link 
-                href="/contact" 
+                href="/" 
                 className="group inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20"
               >
                 Contact Us

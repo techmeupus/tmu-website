@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 // Counter Component with Framer Motion
 interface CounterProps {
@@ -109,6 +110,13 @@ export default function Hero() {
     },
     tap: { scale: 0.95 }
   } as const;
+
+  const scrollToForm = () => {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="relative min-h-screen overflow-hidden py-12 ">
@@ -220,7 +228,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.8 }}
             >
               <motion.button 
-                className="bg-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl text-base sm:text-lg w-full sm:w-auto min-w-[200px] sm:min-w-[220px]"
+                onClick={scrollToForm}
+                className="bg-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl text-base sm:text-lg w-full sm:w-auto min-w-[200px] sm:min-w-[220px] cursor-pointer"
                 variants={buttonVariants}
                 initial="initial"
                 whileHover="hover"
@@ -228,15 +237,18 @@ export default function Hero() {
               >
                 Start Growing Now
               </motion.button>
-              <motion.button 
-                className="bg-gray-800/80 backdrop-blur-sm text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold transition-all duration-300 border border-gray-600/50 text-base sm:text-lg w-full sm:w-auto min-w-[200px] sm:min-w-[220px]"
-                variants={buttonVariants}
-                initial="initial"
-                whileHover="hover"
-                whileTap="tap"
-              >
-                See Case Studies
-              </motion.button>
+              
+              <Link href="/portfolio" className="w-full sm:w-auto">
+                <motion.button 
+                  className="bg-gray-800/80 backdrop-blur-sm text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold transition-all duration-300 border border-gray-600/50 text-base sm:text-lg w-full sm:w-auto min-w-[200px] sm:min-w-[220px] cursor-pointer"
+                  variants={buttonVariants}
+                  initial="initial"
+                  whileHover="hover"
+                  whileTap="tap"
+                >
+                  See Case Studies
+                </motion.button>
+              </Link>
             </motion.div>
             
             {/* Trust Indicators with Animated Counters */}

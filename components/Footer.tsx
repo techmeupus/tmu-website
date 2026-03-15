@@ -67,33 +67,43 @@ export default function Footer() {
             <h3 className="text-white font-semibold tracking-wide mb-5">Our Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/web-development" className="text-gray-400 hover:text-primary text-sm transition-colors">
-                  Web Development
+                <Link href="/services/web-software-solutions" className="text-gray-400 hover:text-primary text-sm transition-colors">
+                  Web & Software Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/it-solutions" className="text-gray-400 hover:text-primary text-sm transition-colors">
-                  IT Solutions
+                <Link href="/services/it-business-technology" className="text-gray-400 hover:text-primary text-sm transition-colors">
+                  IT & Business Technology
                 </Link>
               </li>
               <li>
-                <Link href="/crm-automation" className="text-gray-400 hover:text-primary text-sm transition-colors">
+                <Link href="/services/crm-automation" className="text-gray-400 hover:text-primary text-sm transition-colors">
                   CRM & Automation
                 </Link>
               </li>
               <li>
-                <Link href="/branding" className="text-gray-400 hover:text-primary text-sm transition-colors">
-                  Branding & Design
+                <Link href="/services/branding-business-presence" className="text-gray-400 hover:text-primary text-sm transition-colors">
+                  Branding & Business Presence
                 </Link>
               </li>
               <li>
-                <Link href="/digital-marketing" className="text-gray-400 hover:text-primary text-sm transition-colors">
+                <Link href="/services/digital-marketing" className="text-gray-400 hover:text-primary text-sm transition-colors">
                   Digital Marketing
                 </Link>
               </li>
               <li>
-                <Link href="/ai-tools" className="text-gray-400 hover:text-primary text-sm transition-colors">
-                  AI Solutions
+                <Link href="/services/security-compliance" className="text-gray-400 hover:text-primary text-sm transition-colors">
+                  Security & Compliance
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/ai-smart-business-tools" className="text-gray-400 hover:text-primary text-sm transition-colors">
+                  AI & Smart Business Tools
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/ongoing-monthly-services" className="text-gray-400 hover:text-primary text-sm transition-colors">
+                  Ongoing Monthly Services
                 </Link>
               </li>
             </ul>
@@ -104,7 +114,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold tracking-wide mb-5">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-primary text-sm transition-colors">
+                <Link href="/about-us" className="text-gray-400 hover:text-primary text-sm transition-colors">
                   About Us
                 </Link>
               </li>
@@ -113,7 +123,6 @@ export default function Footer() {
                   Portfolio
                 </Link>
               </li>
-              
               <li>
                 <Link href="/blog" className="text-gray-400 hover:text-primary text-sm transition-colors">
                   Blog & Resources
@@ -124,11 +133,7 @@ export default function Footer() {
                   Careers
                 </Link>
               </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-primary text-sm transition-colors">
-                  Contact Us
-                </Link>
-              </li>
+             
             </ul>
           </div>
 
@@ -161,14 +166,12 @@ export default function Footer() {
                   Info@techmeup.us
                 </a>
               </li>
-             
             </ul>
 
             <div className="mt-6 pt-5 border-t border-gray-800">
               <p className="text-gray-300 text-xs font-medium uppercase tracking-wider mb-3">Business Hours</p>
               <div className="space-y-1">
-                <p className="text-gray-400 text-xs">Mon (Washington's Birthday): 8am–11pm*</p>
-                <p className="text-gray-400 text-xs">Tue-Thu: 8am–11pm</p>
+                <p className="text-gray-400 text-xs">Mon-Thu: 8am–11pm</p>
                 <p className="text-gray-400 text-xs">Fri: 8am–11pm</p>
                 <p className="text-gray-400 text-xs">Sat: 9am–10pm</p>
                 <p className="text-gray-400 text-xs">Sun: 9am–10pm</p>
@@ -187,13 +190,13 @@ export default function Footer() {
               © {new Date().getFullYear()} TechMeUp. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center gap-5 text-xs">
-              <Link href="/privacy" className="text-gray-400 hover:text-primary transition-colors">
+              <Link href="/privacy-policy" className="text-gray-400 hover:text-primary transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-primary transition-colors">
+              <Link href="/terms-of-service" className="text-gray-400 hover:text-primary transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-primary transition-colors">
+              <Link href="/cookie-policy" className="text-gray-400 hover:text-primary transition-colors">
                 Cookie Policy
               </Link>
               <Link href="/sitemap" className="text-gray-400 hover:text-primary transition-colors">
