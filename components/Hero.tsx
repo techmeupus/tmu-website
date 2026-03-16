@@ -268,7 +268,7 @@ export default function Hero() {
                 }}
               >
                 <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
-                  <AnimatedCounter target={200} suffix="+" duration={2} delay={0.1} />
+                  <AnimatedCounter target={20} suffix="+" duration={2} delay={0.1} />
                 </div>
                 <div className="text-gray-300 text-sm sm:text-base">Projects Delivered</div>
               </motion.div>
@@ -283,7 +283,7 @@ export default function Hero() {
                 }}
               >
                 <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
-                  <AnimatedCounter target={98} suffix="%" duration={2} delay={0.3} />
+                  <AnimatedCounter target={100} suffix="%" duration={2} delay={0.3} />
                 </div>
                 <div className="text-gray-300 text-sm sm:text-base">Client Satisfaction</div>
               </motion.div>

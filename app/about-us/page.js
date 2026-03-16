@@ -10,9 +10,9 @@ export const metadata = {
 
 // Stats data
 const stats = [
-  { value: "50+", label: "Projects Completed" },
+  { value: "20+", label: "Projects Completed" },
   { value: "20+", label: "Expert Team" },
-  { value: "95%", label: "Client Satisfaction" },
+  { value: "100%", label: "Client Satisfaction" },
   { value: "24/7", label: "Support Available" },
 ];
 
@@ -79,9 +79,9 @@ const teamMembers = [
     initial: "AS",
   },
   {
-    name: "Atiqa Sharief",
-    role: "Director",
-    bio: "Strategic director driving business excellence and growth",
+    name: "Stephanie",
+    role: "Marketing partner and digital liason",
+    bio: "Strategic Marketing partner driving business excellence and growth",
     initial: "AS",
   },
   {

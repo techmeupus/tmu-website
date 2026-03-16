@@ -152,6 +152,17 @@ export default function Header() {
               }`}>Portfolio</Link>
             <Link href="/about-us" className={`transition-colors font-medium ${isScrolled ? 'text-navy hover:text-primary' : 'text-white hover:text-secondary-light'
               }`}>About Us</Link>
+              <Link
+  href="https://thedigitalsphere.us"
+  className={`transition-colors font-medium ${isScrolled
+    ? 'text-navy hover:text-primary'
+    : 'text-white hover:text-secondary-light'
+    }`}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  On-Site Tech Services
+</Link>
 
             <button
               onClick={handleContactClick}
@@ -213,6 +224,18 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About Us
+              </Link>
+              <Link
+                href="https://thedigitalsphere.us"
+                className={`transition-colors font-medium ${isScrolled
+                  ? 'text-navy hover:text-primary'
+                  : 'text-white hover:text-secondary-light'
+                  }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+                target="_blank" 
+                rel="noopener noreferrer" 
+              >
+                On-Site Tech Services
               </Link>
               <button
                 onClick={handleContactClick}

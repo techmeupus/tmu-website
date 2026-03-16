@@ -14,7 +14,7 @@ const projects = [
     slug: "cinco",
     industry: "Sports / Entertainment",
     workDone: "Website Design & Development",
-    description: "Professional website for soccer facility showcasing fields, leagues, and events.",
+    description: "We made a complete website. With Scheduling, booking , games hosting and Complete business management Web Application. Need to focus more on the web app. Then the website.",
     image: "/image/portfolio/cinco.png",
     logo: "/logos/cinco.svg",
     technologies: ["Node", "Figma", "SEO"],
@@ -32,7 +32,7 @@ const projects = [
     slug: "clydios",
     industry: "Tech / Startup",
     workDone: "Web Platform",
-    description: "Scalable web platform for tech startup with complex functionality.",
+    description: "Clydios is a CRM. we need to list the CRM features (First Ever CRM with complete automation, inbound and outbound functions including Ai automation for sales conversion and tracking. )",
     image: "/image/portfolio/clydios.png",
     logo: "/portfolio/logos/clydios.svg",
     technologies: ["Node", "Node.js", "MongoDB"],
@@ -123,7 +123,7 @@ const projects = [
     industry: "Security",
     workDone: "Website",
     description: "Professional website for security solutions provider.",
-    image: "/image/portfolio/protectify.png",
+    image: "/image/portfolio/protectify2.png",
     logo: "/portfolio/logos/protectify.svg",
     technologies: ["Next.js", "Security Features", "Contact Forms"],
     liveUrl: "https://www.instagram.com/get_protectify/",
@@ -141,7 +141,7 @@ const projects = [
     industry: "Beauty",
     workDone: "Website + Branding",
     description: "Elegant beauty brand website with complete branding package.",
-    image: "/image/portfolio/ziva.png",
+    image: "/image/portfolio/ziva.jpeg",
     logo: "/portfolio/logos/ziva-beauty.svg",
     technologies: ["Shopify", "Branding", "E-commerce"],
     liveUrl: "https://www.facebook.com/Zivabeautyyy/",
@@ -150,6 +150,187 @@ const projects = [
       solution: "Created cohesive branding with elegant website design and seamless shopping experience.",
       result: "Launched successful online store with 30% conversion rate from launch.",
       services: ["UI/UX Design", "Website Development", "Branding", "E-commerce"]
+    }
+  },
+  // STEPHANIE'S CLIENTS (PERSONAL)
+  {
+    id: 9,
+    name: "Level One Grading",
+    slug: "level-one-grading",
+    industry: "Construction / Landscaping",
+    workDone: "Website",
+    description: "Professional website for grading and excavation services.",
+    image: "/image/portfolio/LevelOneGrading.png",
+    logo: "/portfolio/logos/level-one-grading.svg",
+    technologies: ["WordPress", "Mobile Responsive", "SEO"],
+    liveUrl: "https://levelonegrading.com/",
+    caseStudy: {
+      problem: "Grading company needed a professional online presence to showcase their services and attract commercial clients.",
+      solution: "Developed a clean, service-focused website highlighting their equipment, projects, and expertise.",
+      result: "Established professional brand presence with increased quote requests.",
+      services: ["UI/UX Design", "Website Development"]
+    }
+  },
+  {
+    id: 10,
+    name: "Moulton's AC",
+    slug: "moultons-ac",
+    industry: "Home Services",
+    workDone: "Website",
+    description: "HVAC service website for heating and cooling company.",
+    image: "/image/portfolio/Moulton’s AC.png",
+    logo: "/portfolio/logos/moultons-ac.svg",
+    technologies: ["WordPress", "Mobile Responsive", "Contact Forms"],
+    liveUrl: "https://moultonsheatingandcooling.com/",
+    caseStudy: {
+      problem: "HVAC company needed to modernize their online presence and generate more service calls.",
+      solution: "Created a user-friendly website with clear service offerings, emergency contact options, and seasonal specials.",
+      result: "Improved local visibility and increased service appointment bookings.",
+      services: ["UI/UX Design", "Website Development"]
+    }
+  },
+  {
+    id: 11,
+    name: "Paradigm Landscape",
+    slug: "paradigm-landscape",
+    industry: "Landscaping",
+    workDone: "Website",
+    description: "Professional website for landscape design and maintenance services.",
+    image: "/image/portfolio/Paradigm Landscape.png",
+    logo: "/portfolio/logos/Paradigm Landscape.png",
+    technologies: ["WordPress", "Gallery", "Mobile Responsive"],
+    liveUrl: "https://paradigmlandscapeservices.com/",
+    caseStudy: {
+      problem: "Landscaping company needed a visually appealing website to showcase their work and attract residential clients.",
+      solution: "Designed a beautiful portfolio-focused site with before/after galleries and service packages.",
+      result: "Enhanced visual appeal led to more consultation requests and premium service bookings.",
+      services: ["UI/UX Design", "Website Development"]
+    }
+  },
+  {
+    id: 12,
+    name: "A&N HVAC",
+    slug: "an-hvac",
+    industry: "Home Services",
+    workDone: "Website",
+    description: "HVAC service website with multi-location presence.",
+    image: "/image/portfolio/HNBC Florida.png",
+    logo: "/portfolio/logos/HNBC Florida.png",
+    technologies: ["WordPress", "Multi-location SEO", "Contact Forms"],
+    // liveUrl: "https://frcsflorida.com/",
+    caseStudy: {
+      problem: "HVAC company needed a website that could handle multiple service locations and showcase their 24/7 emergency services.",
+      solution: "Built a comprehensive site with location-specific pages and easy emergency contact features.",
+      result: "Streamlined customer inquiries and improved emergency call response rates.",
+      services: ["UI/UX Design", "Website Development", "Local SEO"]
+    }
+  },
+  {
+    id: 13,
+    name: "RVP Training Center",
+    slug: "rvp-training",
+    industry: "Sports / Fitness",
+    workDone: "Website",
+    description: "Sports training facility website showcasing programs and schedules.",
+    image: "/image/portfolio/RVP Training Center.png",
+    logo: "/portfolio/logos/RVP Training Center.png",
+    technologies: ["WordPress", "Calendar Integration", "Registration Forms"],
+    liveUrl: "https://rvptrainingcenter.com/",
+    caseStudy: {
+      problem: "Training center needed a website to promote their programs, display schedules, and manage athlete registrations.",
+      solution: "Created an engaging site with program details, training calendars, and online registration forms.",
+      result: "Increased program sign-ups and streamlined the registration process.",
+      services: ["UI/UX Design", "Website Development", "Registration System"]
+    }
+  },
+  {
+    id: 14,
+    name: "CF Steel",
+    slug: "cf-steel",
+    industry: "Construction / Industrial",
+    workDone: "Website",
+    description: "Industrial website for steel supply and fabrication company.",
+    image: "/image/portfolio/CF Steel.png",
+    logo: "/portfolio/logos/CF Steel.png",
+    technologies: ["WordPress", "Industrial", "Product Gallery"],
+    liveUrl: "https://centralfloridasteel.net/",
+    caseStudy: {
+      problem: "Steel company needed an industrial-grade website to showcase their products and capabilities to commercial clients.",
+      solution: "Developed a professional site with product catalogs, project galleries, and quote request forms.",
+      result: "Enhanced B2B lead generation and established industry authority.",
+      services: ["UI/UX Design", "Website Development"]
+    }
+  },
+  {
+    id: 15,
+    name: "Ana Vargas - FRSC",
+    slug: "ana-vargas-frsc",
+    industry: "Real Estate / Property Management",
+    workDone: "Website",
+    description: "Professional real estate website for property management services.",
+    image: "/image/portfolio/FRCS Florida.png",
+    logo: "/portfolio/logos/FRCS Florida.png",
+    technologies: ["WordPress", "Real Estate", "Contact Forms"],
+    liveUrl: "https://frcsflorida.com/",
+    caseStudy: {
+      problem: "Real estate professional needed a dedicated online presence to showcase properties and attract clients.",
+      solution: "Created a professional real estate site with property listings and easy contact options.",
+      result: "Increased property inquiries and established stronger client trust.",
+      services: ["UI/UX Design", "Website Development"]
+    }
+  },
+  {
+    id: 16,
+    name: "FloGutters Man",
+    slug: "flo-gutters",
+    industry: "Home Services",
+    workDone: "Website",
+    description: "Service website for gutter installation and maintenance company.",
+    image: "/image/portfolio/flo-gutters.png",
+    logo: "/portfolio/logos/flo-gutters.svg",
+    technologies: ["WordPress", "Local SEO", "Mobile Responsive"],
+    liveUrl: "https://floguttersman.com/",
+    caseStudy: {
+      problem: "Gutter company needed a website to generate local leads and showcase their services.",
+      solution: "Built a straightforward service site with clear offerings, service areas, and quote request forms.",
+      result: "Improved local search visibility and consistent lead generation.",
+      services: ["UI/UX Design", "Website Development", "Local SEO"]
+    }
+  },
+  {
+    id: 17,
+    name: "YA Dosp",
+    slug: "ya-dosp",
+    industry: "Nonprofit / Religious",
+    workDone: "Website",
+    description: "Website for young adult ministry organization.",
+    image: "/image/portfolio/ya-dosp.png",
+    logo: "/portfolio/logos/ya-dosp.svg",
+    technologies: ["WordPress", "Event Calendar", "Donation Forms"],
+    liveUrl: "https://tampabaycatholicya.org/",
+    caseStudy: {
+      problem: "Young adult ministry needed a website to promote events, share resources, and engage the community.",
+      solution: "Designed an inviting site with event calendars, photo galleries, and easy donation options.",
+      result: "Increased event attendance and community engagement.",
+      services: ["UI/UX Design", "Website Development", "Event Management"]
+    }
+  },
+  {
+    id: 18,
+    name: "BSCC",
+    slug: "bscc",
+    industry: "Religious / Nonprofit",
+    workDone: "Website",
+    description: "Parish website for Blessed Sacrament Catholic Church.",
+    image: "/image/portfolio/blessed sacrament catholic.png",
+    logo: "/portfolio/logos/blessed sacrament catholic.png",
+    technologies: ["WordPress", "Event Management", "Donation Integration"],
+    liveUrl: "https://blessedsacramentcatholic.org/",
+    caseStudy: {
+      problem: "Church needed a modern website to share information, mass schedules, and connect with parishioners.",
+      solution: "Created a welcoming, easy-to-navigate site with event calendars, bulletin uploads, and donation capabilities.",
+      result: "Improved parishioner communication and streamlined information sharing.",
+      services: ["UI/UX Design", "Website Development", "Content Management"]
     }
   }
 ];
@@ -164,14 +345,80 @@ const industries = [
   { name: "Tech", count: "1 Project", icon: "⬟" },
 ];
 
-// Technologies data
-const technologies = [
-  { name: "WordPress", icon: "▹" },
-  { name: "Next", icon: "▹" },
-  { name: "Node", icon: "▹" },
-  { name: "Shopify", icon: "▹" },
-  { name: "SEO", icon: "▹" },
-  { name: "Figma", icon: "▹" },
+// Updated Technologies data with categories
+const technologyCategories = [
+  {
+    name: "Frontend",
+    technologies: [
+      { name: "React" },
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" }
+    ]
+  },
+  {
+    name: "Backend",
+    technologies: [
+      { name: "Node.js" },
+      { name: "Python" },
+      { name: "FastAPI" },
+      { name: "GraphQL" }
+    ]
+  },
+  {
+    name: "Agentic Systems",
+    technologies: [
+      { name: "LangGraph" },
+      { name: "CrewAI" },
+      { name: "AutoGen" },
+      { name: "LangChain" }
+    ]
+  },
+  {
+    name: "LLM Platforms",
+    technologies: [
+      { name: "OpenAI" },
+      { name: "Anthropic" },
+      { name: "Mistral" },
+      { name: "Llama" }
+    ]
+  },
+  {
+    name: "Knowledge AI",
+    technologies: [
+      { name: "Pinecone" },
+      { name: "Weaviate" },
+      { name: "FAISS" },
+      { name: "Chroma" }
+    ]
+  },
+  {
+    name: "Cloud & Infra",
+    technologies: [
+      { name: "AWS" },
+      { name: "Docker" },
+      { name: "Kubernetes" },
+      { name: "Vercel" }
+    ]
+  },
+  {
+    name: "Marketing",
+    technologies: [
+      { name: "Google Ads" },
+      { name: "Meta Ads" },
+      { name: "Analytics" },
+      { name: "HubSpot" }
+    ]
+  },
+  {
+    name: "CMS & E-commerce",
+    technologies: [
+      { name: "WordPress" },
+      { name: "Shopify" },
+      { name: "Sanity" },
+      { name: "Contentful" }
+    ]
+  }
 ];
 
 // Testimonials
@@ -194,9 +441,9 @@ export default function PortfolioContent() {
   // Get unique industries for filter
   const uniqueIndustries = Array.from(new Set(projects.map(p => p.industry)));
   const industries_filter = ["All", ...uniqueIndustries];
-  
-  const filteredProjects = filter === "All" 
-    ? projects 
+
+  const filteredProjects = filter === "All"
+    ? projects
     : projects.filter(p => p.industry === filter);
 
   return (
@@ -205,12 +452,12 @@ export default function PortfolioContent() {
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{ 
+          <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }}></div>
         </div>
-        
+
         {/* Soft gradient orbs */}
         <div className="absolute top-20 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 -right-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"></div>
@@ -231,12 +478,12 @@ export default function PortfolioContent() {
                 Client Success Stories
               </span>
             </h1>
-            
+
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              A selection of projects we've designed and developed for businesses across different industries. 
+              A selection of projects we've designed and developed for businesses across different industries.
               Each project represents our commitment to excellence and innovation.
             </p>
-            
+
             {/* Project Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-3xl mx-auto">
               <div className="text-center">
@@ -248,7 +495,7 @@ export default function PortfolioContent() {
                 <div className="text-xs md:text-sm text-gray-400">Industries</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">10+</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">30+</div>
                 <div className="text-xs md:text-sm text-gray-400">Technologies</div>
               </div>
               <div className="text-center">
@@ -268,11 +515,10 @@ export default function PortfolioContent() {
               <button
                 key={industry}
                 onClick={() => setFilter(industry)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  filter === industry
-                    ? 'bg-primary text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === industry
+                  ? 'bg-primary text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
               >
                 {industry}
               </button>
@@ -318,7 +564,7 @@ export default function PortfolioContent() {
                       }
                     }}
                   />
-                  
+
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                     <span className="text-white font-semibold px-4 py-2 border-2 border-white rounded-lg">
@@ -326,7 +572,7 @@ export default function PortfolioContent() {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-xl font-bold text-gray-900">{project.name}</h3>
@@ -348,56 +594,185 @@ export default function PortfolioContent() {
         </div>
       </section>
 
-      {/* Industries Covered */}
-      <section className="section-padding bg-white">
+
+
+      {/* Technologies Used - REDESIGNED PROFESSIONAL VERSION */}
+      <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Industries</span>
-            <h2 className="heading-lg mt-3 mb-4">Industries We Serve</h2>
-            <p className="text-gray-600">
-              From home services to tech startups, we've helped businesses across diverse sectors.
+          <div className="text-center max-w-2xl mx-auto ">
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Our Tech Stack</span>
+            <h2 className="heading-lg mt-3 mb-4">Cutting-Edge Technology Ecosystem</h2>
+            <p className="text-gray-600 text-lg">
+              We leverage modern technologies across the full development stack to build scalable, intelligent, and high-performance solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-gray-50 rounded-xl p-6 text-center group cursor-default"
-              >
-                <div className="text-2xl text-primary mb-2 group-hover:scale-110 transition-transform font-light">{industry.icon}</div>
-                <h3 className="font-semibold text-gray-900 mb-1">{industry.name}</h3>
-                <p className="text-xs text-gray-500">{industry.count}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+          {/* Technologies Used - ULTRA PREMIUM INTERACTIVE DESIGN */}
+          <section className="section-padding bg-white relative overflow-hidden">
 
-      {/* Technologies Used */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Tech Stack</span>
-            <h2 className="heading-lg mt-3 mb-4">Technologies We Use</h2>
-            <p className="text-gray-600">
-              Modern tools and platforms to build exceptional digital experiences.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {technologies.map((tech, index) => (
+
+            <div className="container-custom relative z-10">
+
+              {/* Interactive Technology Grid */}
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+                {technologyCategories.map((category, categoryIndex) => (
+                  <motion.div
+                    key={categoryIndex}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    {/* Interactive Card */}
+                    <div className="relative bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 overflow-hidden">
+
+                      {/* Hover gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] via-transparent to-secondary/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                      {/* Top accent bar - animated on hover */}
+                      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary/50 via-primary to-secondary/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
+
+                      {/* Category Header */}
+                      <div className="relative px-6 py-6 border-b border-slate-100">
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-xl font-semibold text-slate-900 tracking-tight">{category.name}</h3>
+
+                          {/* Interactive index number with subtle dot */}
+                          <div className="flex items-center space-x-2">
+                            <span className="text-3xl font-light text-slate-200 group-hover:text-primary/20 transition-colors duration-300">
+                              {(categoryIndex + 1).toString().padStart(2, '0')}
+                            </span>
+                            <span className="w-1 h-1 rounded-full bg-primary/30 group-hover:bg-primary transition-colors duration-300"></span>
+                          </div>
+                        </div>
+
+                        {/* Decorative line */}
+                        <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+                      </div>
+
+                      {/* Technologies List - Interactive */}
+                      <div className="p-6">
+                        <div className="space-y-2">
+                          {category.technologies.map((tech, techIndex) => (
+                            <motion.div
+                              key={techIndex}
+                              initial={{ opacity: 0, x: -10 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.3, delay: (categoryIndex * 0.1) + (techIndex * 0.05) }}
+                              viewport={{ once: true }}
+                              className="relative"
+                            >
+                              <div className="flex items-center justify-between py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-white group/tech transition-all duration-300 cursor-default border border-slate-100 hover:border-primary/20 hover:shadow-sm">
+
+                                {/* Tech name with hover animation */}
+                                <span className="text-sm font-medium text-slate-600 group-hover/tech:text-primary transition-all duration-300">
+                                  {tech.name}
+                                </span>
+
+                                {/* Subtle decorative element - just a gentle glow */}
+                                <div className="relative">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover/tech:bg-primary/50 transition-all duration-300"></div>
+
+                                  {/* Very subtle pulse effect on hover */}
+                                  <span className="absolute inset-0 rounded-full bg-primary/20 scale-0 group-hover/tech:scale-150 opacity-0 group-hover/tech:opacity-100 transition-all duration-500"></span>
+                                </div>
+                              </div>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Bottom gradient on hover */}
+                      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                    </div>
+
+                    {/* Decorative floating elements */}
+                    <div className="absolute -top-2 -right-2 w-16 h-16 bg-primary/5 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+                    <div className="absolute -bottom-2 -left-2 w-20 h-20 bg-secondary/5 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Interactive Stats Bar */}
               <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-xl transition-all border border-gray-100"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="mt-20"
               >
-                <div className="text-primary text-xl mb-2">{tech.icon}</div>
-                <h3 className="font-semibold text-gray-900">{tech.name}</h3>
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-100 p-8 max-w-3xl mx-auto shadow-sm">
+                  <div className="flex items-center justify-around">
+                    {/* Stat 1 */}
+                    <div className="text-center group/stat cursor-default">
+                      <div className="relative inline-block">
+                        <span className="text-3xl md:text-4xl font-bold text-slate-900 group-hover/stat:text-primary transition-colors duration-300">30+</span>
+                        <span className="absolute -top-1 -right-2 w-1.5 h-1.5 bg-primary rounded-full opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300"></span>
+                      </div>
+                      <p className="text-sm text-slate-500 mt-2 font-light tracking-wide">Technologies Mastered</p>
+                    </div>
+
+                    {/* Divider */}
+                    <div className="w-px h-12 bg-gradient-to-b from-transparent via-slate-200 to-transparent"></div>
+
+                    {/* Stat 2 */}
+                    <div className="text-center group/stat cursor-default">
+                      <div className="relative inline-block">
+                        <span className="text-3xl md:text-4xl font-bold text-slate-900 group-hover/stat:text-secondary transition-colors duration-300">8</span>
+                        <span className="absolute -top-1 -right-2 w-1.5 h-1.5 bg-secondary rounded-full opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300"></span>
+                      </div>
+                      <p className="text-sm text-slate-500 mt-2 font-light tracking-wide">Specialized Categories</p>
+                    </div>
+
+                    {/* Divider */}
+                    <div className="w-px h-12 bg-gradient-to-b from-transparent via-slate-200 to-transparent"></div>
+
+                    {/* Stat 3 */}
+                    <div className="text-center group/stat cursor-default">
+                      <div className="relative inline-block">
+                        <span className="text-3xl md:text-4xl font-bold text-slate-900 group-hover/stat:text-primary transition-colors duration-300">100%</span>
+                        <span className="absolute -top-1 -right-2 w-1.5 h-1.5 bg-primary rounded-full opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300"></span>
+                      </div>
+                      <p className="text-sm text-slate-500 mt-2 font-light tracking-wide">Project Success</p>
+                    </div>
+                  </div>
+
+                  {/* Animated progress bar */}
+                  <div className="mt-6 h-1 w-full bg-slate-100 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: "100%" }}
+                      transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
+                      viewport={{ once: true }}
+                      className="h-full bg-gradient-to-r from-primary via-primary to-secondary rounded-full"
+                    />
+                  </div>
+                </div>
               </motion.div>
-            ))}
-          </div>
+
+              {/* Floating interactive elements */}
+              <div className="absolute top-20 left-10 w-32 h-32 border border-primary/5 rounded-full animate-pulse hidden lg:block"></div>
+              <div className="absolute bottom-20 right-10 w-40 h-40 border border-secondary/5 rounded-full animate-pulse delay-1000 hidden lg:block"></div>
+            </div>
+          </section>
+
+          {/* Bottom Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <div className="inline-flex items-center space-x-2 bg-primary/5 rounded-full px-6 py-3">
+              <span className="text-primary">⚡</span>
+              <span className="text-gray-700">
+                <span className="font-bold text-primary">30+</span> technologies across <span className="font-bold text-primary">8</span> categories
+              </span>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -436,8 +811,8 @@ export default function PortfolioContent() {
               Let's build something great together.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="group inline-flex items-center px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Start a Project
@@ -445,8 +820,8 @@ export default function PortfolioContent() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="group inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20"
               >
                 Contact Us
