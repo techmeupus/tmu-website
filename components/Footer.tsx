@@ -171,8 +171,7 @@ export default function Footer() {
             <div className="mt-6 pt-5 border-t border-gray-800">
               <p className="text-gray-300 text-xs font-medium uppercase tracking-wider mb-3">Business Hours</p>
               <div className="space-y-1">
-                <p className="text-gray-400 text-xs">Mon-Thu: 8am–11pm</p>
-                <p className="text-gray-400 text-xs">Fri: 8am–11pm</p>
+                <p className="text-gray-400 text-xs">Mon-Fri: 8am–11pm</p>
                 <p className="text-gray-400 text-xs">Sat: 9am–10pm</p>
                 <p className="text-gray-400 text-xs">Sun: 9am–10pm</p>
                 <p className="text-gray-500 text-[10px] mt-2">*Hours might differ on holidays</p>
