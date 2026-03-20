@@ -79,10 +79,16 @@ const teamMembers = [
     initial: "AS",
   },
   {
+    name: "Atiqa Sharief",
+    role: "Director",
+    bio: "Strategic director focused on driving growth through effective leadership.",
+    initial: "AS",
+  },
+  {
     name: "Stephanie",
     role: "Marketing partner and digital liason",
     bio: "Strategic Marketing partner driving business excellence and growth",
-    initial: "AS",
+    initial: "S",
   },
   {
     name: "Chandrakant",
@@ -324,7 +330,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-12 max-w-4xl mx-auto">
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
